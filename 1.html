@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<!-- <link rel="stylesheet" href="1.css"> -->
+	<style>
+	.circle {
+		border-radius: 50%;
+		width: 200px;
+		height: 200px; 
+		transform-style: preserve-3d;
+		/* width and height can be anything, as long as they're equal */
+	}
+
+
+	@keyframes spin {
+		from { transform: rotate(0deg); transform-style: preserve-3d;}
+		to { transform: rotate(360deg); transform-style: preserve-3d;}
+	}
+
+	/* Spinning, gradient circle; CSS only! */
+	#advanced {
+		width: 200px;
+		height: 200px;
+		transform-style: preserve-3d;
+/*
+		background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);*/
+		background-image: -webkit-radial-gradient(45px 45px, circle cover, white, orange);
+/*		background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+*/
+		animation-name: spin; 
+		animation-duration: 3s; /* 3 seconds */
+		animation-iteration-count: infinite; 
+		animation-timing-function: linear;
+	}
+</style>
+</head>
+<body>
+	<div class="circle" id="advanced">
+		
+	</div>
+</body>
+</html>
